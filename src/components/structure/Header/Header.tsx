@@ -9,9 +9,12 @@ import {
   IconButton,
   Text,
   useDisclosure,
+  useColorMode,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { HiOutlineMenuAlt4 } from 'react-icons/hi'
 import { VscChromeClose } from 'react-icons/vsc'
+import { FiMoon, FiSun } from 'react-icons/fi'
 import { usePostHog } from 'posthog-js/react'
 import { NAME } from '@config/config'
 import { Menu } from './Menu'
@@ -21,6 +24,7 @@ export const Header: React.FC = () => {
   const { asPath, locale = 'en', query, pathname, push } = useRouter()
   const { isOpen, onToggle, onClose } = useDisclosure()
   const posthog = usePostHog()
+  const { colorMode, toggleColorMode } = useColorMode()
 
   const toggleLocale = (): void => {
     posthog.capture('locale_toggled')
@@ -36,11 +40,11 @@ export const Header: React.FC = () => {
         zIndex='banner'
         align='center'
         justify='space-between'
-        bg='white'
+        bg={useColorModeValue('white', 'gray.800')}
         pt='12'
         pb='4'
         px={{ base: '4', md: '8' }}
-        borderColor='black'
+        borderColor={useColorModeValue('black', 'white')}
         borderBottom='1px solid'
       >
         <NextLink href='/' passHref legacyBehavior>
@@ -54,6 +58,16 @@ export const Header: React.FC = () => {
           </Text>
         </NextLink>
         <HStack spacing='2'>
+          <IconButton
+            aria-label={colorMode === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+            icon={colorMode === 'light' ? <FiMoon /> : <FiSun />}
+            variant='icon'
+            size='icon'
+            onClick={() => {
+              toggleColorMode();
+              posthog.capture('color_mode_toggled', { mode: colorMode === 'light' ? 'dark' : 'light' });
+            }}
+          />
           <Button variant='icon' size='icon' onClick={toggleLocale}>
             {locale === 'en' ? 'FR' : 'EN'}
           </Button>

@@ -5,7 +5,7 @@ import { appWithTranslation } from 'next-i18next'
 import { DefaultSeo } from 'next-seo'
 import posthog from 'posthog-js'
 import { PostHogProvider } from 'posthog-js/react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
 import { Fonts } from '@components/meta'
 import { config } from '@config/config'
 // import { useSetupPostHog } from '@utils/hooks/use-setup-posthog'
@@ -33,6 +33,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       <Analytics />
       <DefaultSeo {...config.seo} />
       <PostHogProvider client={posthog}>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <ChakraProvider theme={theme}>
           <Fonts />
           <Component {...pageProps} />

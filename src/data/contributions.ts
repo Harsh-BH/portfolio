@@ -3,8 +3,8 @@ import type { ContributionProps } from '@components/structure/OpenSource/Contrib
 
 export const contributions: ContributionProps[] = [
   {
-    user: 'chr-ge',
-    repository: 'react-column-select',
+    user: 'Harsh-BH',
+    repository: 'd11',
     role: {
       label: 'creator',
       color: 'green',
