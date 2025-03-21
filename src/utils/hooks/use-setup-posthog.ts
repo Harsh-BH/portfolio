@@ -1,4 +1,4 @@
-// import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 // import { Router } from 'next/router'
 // import posthog from 'posthog-js'
 // import { env } from '@config/browser.env'

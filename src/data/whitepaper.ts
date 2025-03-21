@@ -16,9 +16,9 @@ export const whitePapers = [
     {
         title: 'Fin-Gan: A Generative Adversarial Network for Financial Data',
         date: 'december 2024',
-        description: '',
-        link: 'https://drive.google.com/file/d/1ACJ69Ga0f575ro6N10jUudHbu_s9FCSq/view',
-        topics: ['Blockchain', 'Defi', 'ZKP'],
+        description: 'Modeling Financial Time-Series with Generative Adversarial Networks',
+        link: 'https://drive.google.com/file/d/1E1ffXdFu_eP2Qv3nF-7YkyV6m7HUgP7I/view?usp=sharing',
+        topics: ['GAN', 'AI', 'ML','Finance','Data'],
       },
     // Add more white papers as needed
   ]

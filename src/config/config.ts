@@ -70,10 +70,10 @@ export const config: Config = {
       { rel: 'shortcut icon', href: '/icons/favicon.ico' },
     ],
   },
-  email: 'george@chr-ge.com',
-  email_link: 'mailto:george@chr-ge.com',
-  github: 'https://github.com/chr-ge',
-  linkedin: 'https://www.linkedin.com/in/chr-ge/',
+  email: 'harsh.aby.007@gmail.com',
+  email_link: 'mailto:harsh.aby.007@gmail.com',
+  github: 'https://github.com/Harsh-BH',
+  linkedin: 'https://www.linkedin.com/in/harsh-bhatt-114a2a293/',
 }
 
 interface Config {

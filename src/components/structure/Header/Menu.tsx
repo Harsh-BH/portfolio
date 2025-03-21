@@ -5,8 +5,12 @@ import { NavItem, type NavItemProps } from './NavItem'
 const navItems: Omit<NavItemProps, 'onClose'>[] = [
   { name: 'home', href: '/' },
   { name: 'projects', href: '/#projects' },
-  { name: 'bookmarks', href: '/bookmarks' },
-  { name: 'contact', href: '/#contact' },
+  { name: 'Experience', href: '/#experience' },
+  { name: 'White Papers', href: '/#whitepapers' },
+  { name: 'About Me', href: '/#about' },
+  
+  
+  // { name: 'contact', href: '/#contact' },
 ]
 
 const MotionStack = motion(Stack)

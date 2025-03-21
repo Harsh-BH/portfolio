@@ -11,10 +11,9 @@ import {
   useDisclosure,
   useColorMode,
   useColorModeValue,
+  Icon,
 } from '@chakra-ui/react'
-import { HiOutlineMenuAlt4 } from 'react-icons/hi'
-import { VscChromeClose } from 'react-icons/vsc'
-import { FiMoon, FiSun } from 'react-icons/fi'
+import { MoonIcon, SunIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import { usePostHog } from 'posthog-js/react'
 import { NAME } from '@config/config'
 import { Menu } from './Menu'
@@ -60,7 +59,7 @@ export const Header: React.FC = () => {
         <HStack spacing='2'>
           <IconButton
             aria-label={colorMode === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
-            icon={colorMode === 'light' ? <FiMoon /> : <FiSun />}
+            icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             variant='icon'
             size='icon'
             onClick={() => {
@@ -73,7 +72,7 @@ export const Header: React.FC = () => {
           </Button>
           <IconButton
             aria-label={t(isOpen ? 'close-menu' : 'open-menu')}
-            icon={isOpen ? <VscChromeClose /> : <HiOutlineMenuAlt4 />}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             variant='icon'
             size='icon'
             onClick={onToggle}

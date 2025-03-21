@@ -4,7 +4,7 @@ export const about = {
     imageAlt: 'profile-image-alt',
     greeting: 'HARSH BHATT',
     paragraphs: [
-      "I'm a passionate software developer with a keen interest in building comprehensive technology solutions. My expertise spans full-stack development, where I enjoy creating seamless user experiences with modern frameworks while also implementing robust backend systems. I'm constantly exploring new technologies and methodologies to enhance my development toolkit.",
+      "I'm a 2nd year undergraduate student in the Department of Chemical Engineering at IIT Kharagpur. I'm a passionate software developer with a keen interest in building comprehensive technology solutions. My expertise spans full-stack development, where I enjoy creating seamless user experiences with modern frameworks while also implementing robust backend systems. I'm constantly exploring new technologies and methodologies to enhance my development toolkit.",
       "Beyond traditional web development, I'm deeply fascinated by machine learning and AI applications. I actively pursue projects that integrate ML capabilities into practical solutions. Additionally, I've developed strong skills in DevOps practices, focusing on CI/CD pipelines, containerization, and infrastructure as code to ensure smooth deployment and scaling of applications I build."
     ],
   };

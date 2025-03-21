@@ -23,6 +23,23 @@ import {
   SiTerraform,
   SiTypescript,
   SiVercel,
+  SiC,
+  SiCplusplus,
+  SiVite,
+  SiHtml5,
+  SiCss3,
+  SiGo,
+  SiFlask,
+  SiFastapi,
+  SiRender,
+  SiFirebase,
+  SiAmazonlumberyard,
+  SiGitforwindows,
+  SiTensorflow,
+  SiPytorch,
+  SiScikitlearn,
+  SiPandas,
+  SiNumpy,
 } from 'react-icons/si'
 import { Javascript } from '@components/icons'
 import type { SkillGroup } from '@utils/types'
@@ -34,9 +51,12 @@ export const skills: SkillGroup[] = [
     skills: [
       { name: 'Typescript', icon: SiTypescript, color: '#3178C6' },
       { name: 'Javascript', icon: Javascript, color: '#F7DF1E' },
-      { name: 'PHP', icon: SiPhp, color: '#777BB4' },
+      // { name: 'PHP', icon: SiPhp, color: '#777BB4' },
       { name: 'Python', icon: SiPython, color: '#3776AB' },
-      { name: 'Ruby', icon: SiRuby, color: '#CC342D' },
+      // { name: 'Ruby', icon: SiRuby, color: '#CC342D' },
+      { name: 'C', icon: SiC, color: '#A8B9CC' },
+      { name: 'C++', icon: SiCplusplus, color: '#00599C' },
+   
     ],
   },
   {
@@ -44,10 +64,10 @@ export const skills: SkillGroup[] = [
     category: 'front-end',
     skills: [
       { name: 'React', icon: SiReact, color: '#61DAFB' },
-      { name: 'React Native', icon: SiReact, color: 'gray.500' },
       { name: 'SCSS', icon: SiSass, color: '#CC6699' },
       { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#38B2AC' },
-      { name: 'Progressive Web App', icon: IoLogoPwa, color: '#5a0fc8' },
+      { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
+      { name: 'Vite', icon: SiVite, color: '#646CFF' },
     ],
   },
   {
@@ -56,10 +76,10 @@ export const skills: SkillGroup[] = [
     skills: [
       { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
       { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
-      { name: 'GraphQL', icon: SiGraphql, color: '#E10098' },
       { name: 'Express', icon: SiExpress, color: '#000000' },
-      { name: 'Laravel', icon: SiLaravel, color: '#FF2D20' },
-      { name: 'Ruby on Rails', icon: SiRubyonrails, color: '#D30001' },
+      { name: 'Flask', icon: SiFlask, color: '#000000' },
+      { name: 'FastAPI', icon: SiFastapi, color: '#009688' },
+      { name: 'Go', icon: SiGo, color: '#00ADD8' }
     ],
   },
   {
@@ -74,7 +94,8 @@ export const skills: SkillGroup[] = [
       { name: 'Google Cloud Platform', icon: SiGooglecloud, color: '#4285F4' },
       { name: 'Vercel', icon: SiVercel, color: '#000000' },
       { name: 'Heroku', icon: SiHeroku, color: '#430098' },
-      { name: 'Terraform', icon: SiTerraform, color: '#844FBA' },
+    { name: 'Render', icon: SiRender, color: '#46E3B7' },
+    { name: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
     ],
   },
   {
@@ -86,6 +107,17 @@ export const skills: SkillGroup[] = [
       { name: 'Amazon DynamoDB', icon: SiAmazondynamodb, color: '#4053D6' },
       { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
       { name: 'Redis', icon: SiRedis, color: '#DC382D' },
+    ],
+  },
+  {
+    id: '6',
+    category: 'ML & Data Science',
+    skills: [
+      { name: 'TensorFlow', icon: SiTensorflow, color: '#FF6F00' },
+      { name: 'PyTorch', icon: SiPytorch, color: '#EE4C2C' },
+      { name: 'scikit-learn', icon: SiScikitlearn, color: '#F7931E' },
+      { name: 'Pandas', icon: SiPandas, color: '#150458' },
+      { name: 'NumPy', icon: SiNumpy, color: '#013243' },
     ],
   },
 ]

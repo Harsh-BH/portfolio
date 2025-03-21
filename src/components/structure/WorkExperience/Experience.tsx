@@ -11,6 +11,8 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { FiBriefcase } from 'react-icons/fi'
+import { IconType } from 'react-icons'
+import { IconContext } from 'react-icons'
 import { motion } from 'framer-motion'
 
 // Create motion components for text elements
@@ -25,6 +27,26 @@ interface ExperienceProps {
   companyUrl?: string
   technologies?: string[]
   color?: string
+}
+
+export interface ContributionProps {
+  user: string
+  repository: string
+  role: {
+    label: string
+    color: string
+  }
+  githubUrl: string
+  description: {
+    en: string
+    fr: string
+  }
+  topics: string[]
+  language: {
+    name: string
+    icon: IconType
+    color: string
+  }
 }
 
 export const Experience: React.FC<ExperienceProps> = ({
@@ -103,6 +125,7 @@ export const Experience: React.FC<ExperienceProps> = ({
                 key={tech}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
+                // @ts-ignore - framer-motion transition prop
                 transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
               >
                 <Tag
@@ -116,14 +139,22 @@ export const Experience: React.FC<ExperienceProps> = ({
               </Box>
             ))}
           </HStack>
-          <Box 
-            as={motion(FiBriefcase)} 
+          <Box
+            as={motion.div}
             color={color} 
             boxSize='5'
             initial={{ opacity: 0, rotate: -20 }}
             animate={{ opacity: 1, rotate: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          />
+            style={{ transition: 'all 0.5s ease 0.5s' }}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <IconContext.Provider value={{ color: color, size: "100%" }}>
+              {/* @ts-ignore - Bypass strict typing */}
+              <FiBriefcase />
+            </IconContext.Provider>
+          </Box>
         </Flex>
       </Flex>
     </LinkBox>

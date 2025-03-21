@@ -44,7 +44,7 @@ export const AboutMe: React.FC = () => {
       scrollMarginTop="var(--chakra-sizes-header-height)"
     >
       <Heading as="h2" variant="section" size="2xl" color={headingColor}>
-        {t(about.title)}
+        {about.title}
       </Heading>
 
       <MotionFlex
@@ -59,7 +59,7 @@ export const AboutMe: React.FC = () => {
         <MotionBox variants={item} flex="1">
           <Image
             src={about.imageUrl}
-            alt={t(about.imageAlt)}
+            alt={about.imageAlt}
             borderRadius="xl"
             boxShadow="lg"
             objectFit="cover"
@@ -69,12 +69,12 @@ export const AboutMe: React.FC = () => {
 
         <VStack align="flex-start" spacing="6" flex="2">
           <MotionHeading as="h3" size="lg" color={headingColor} variants={item}>
-            {t(about.greeting)}
+            {about.greeting}
           </MotionHeading>
           
           {about.paragraphs.map((paragraph, index) => (
             <MotionText key={index} color={textColor} fontSize="lg" variants={item}>
-              {t(paragraph)}
+              {paragraph}
             </MotionText>
           ))}
           

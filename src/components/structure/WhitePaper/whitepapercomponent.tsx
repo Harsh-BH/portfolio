@@ -14,6 +14,7 @@ export const WhitePapers: React.FC = () => {
 
   return (
     <VStack
+      id = 'whitepapers'
       as='section'
       align='stretch'
       pb='20'

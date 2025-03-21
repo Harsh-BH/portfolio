@@ -14,6 +14,7 @@ export const WorkExperience: React.FC = () => {
 
   return (
     <VStack
+      id = 'experience'
       as='section'
       align='stretch'
       pb='20'

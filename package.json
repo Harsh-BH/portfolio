@@ -21,8 +21,12 @@
     "url": "git+https://github.com/chr-ge/chr-ge.com.git"
   },
   "dependencies": {
+    "@chakra-ui/anatomy": "^2.3.4",
+    "@chakra-ui/hooks": "^2.4.2",
+    "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/next-js": "^2.4.2",
     "@chakra-ui/react": "^2.8.2",
+    "@chakra-ui/theme-tools": "^2.2.6",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@fontsource-variable/manrope": "^5.2.5",

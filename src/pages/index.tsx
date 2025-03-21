@@ -2,7 +2,7 @@ import type { GetStaticProps, NextPage } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { MainLayout } from '@components/layouts/MainLayout'
 import {
-  ContactMe,
+  // ContactMe,
   Hero,
 
   SelectedProjects,

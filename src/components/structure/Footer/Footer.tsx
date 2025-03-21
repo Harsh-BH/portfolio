@@ -1,6 +1,15 @@
 import { useTranslation } from 'next-i18next'
-import { Flex, Link, Text, HStack, IconButton, Stack } from '@chakra-ui/react'
-import { VscArrowUp } from 'react-icons/vsc'
+import { 
+  Flex, 
+  Link, 
+  Text, 
+  HStack, 
+  IconButton, 
+  Stack, 
+  useColorModeValue,
+  Icon
+} from '@chakra-ui/react'
+import { ArrowUpIcon } from '@chakra-ui/icons'
 import { usePostHog } from 'posthog-js/react'
 import { config } from '@config/config'
 
@@ -8,12 +17,18 @@ const links: { name: string; href: string }[] = [
   { name: 'Email', href: config.email_link },
   { name: 'Github', href: config.github },
   { name: 'LinkedIn', href: config.linkedin },
-  { name: 'PGP/GPG Key', href: '/gpg.txt' },
 ]
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation('common')
   const posthog = usePostHog()
+  
+  // Dark mode color values
+  const borderColor = useColorModeValue('black', 'whiteAlpha.300')
+  const textColor = useColorModeValue('gray.800', 'gray.200')
+  const linkColor = useColorModeValue('black', 'white')
+  const linkHoverColor = useColorModeValue('blue.800', 'blue.100')
+  const iconBgHover = useColorModeValue('gray.100', 'whiteAlpha.200')
 
   return (
     <Flex
@@ -25,8 +40,9 @@ export const Footer: React.FC = () => {
       pt='12'
       pb='24'
       px={{ base: '4', md: '8' }}
-      borderColor='black'
+      borderColor={borderColor}
       borderTop='1px solid'
+      color={textColor}
     >
       <Stack
         direction={{ base: 'column', lg: 'row' }}
@@ -54,6 +70,8 @@ export const Footer: React.FC = () => {
               title={name}
               href={href}
               variant='social'
+              color={linkColor}
+              _hover={{ color: linkHoverColor }}
               onClick={() =>
                 posthog.capture('footer_link_clicked', { name, link: href })
               }
@@ -66,9 +84,11 @@ export const Footer: React.FC = () => {
         <IconButton
           aria-label={t('go-to-top')}
           title={t('go-to-top')}
-          icon={<VscArrowUp />}
+          icon={<ArrowUpIcon />}
           variant='icon'
           size='icon'
+          color={textColor}
+          _hover={{ bg: iconBgHover }}
           onClick={() => window.scrollTo(0, 0)}
         />
       </Stack>
