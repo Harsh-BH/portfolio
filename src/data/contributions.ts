@@ -1,5 +1,5 @@
 import { SiJavascript, SiTypescript } from 'react-icons/si'
-import type { ContributionProps } from '@components/structure/OpenSource/Contribution'
+import type { ContributionProps } from '@components/structure/WorkExperience/Experience'
 
 export const contributions: ContributionProps[] = [
   {

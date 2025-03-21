@@ -4,13 +4,16 @@ import { MainLayout } from '@components/layouts/MainLayout'
 import {
   ContactMe,
   Hero,
-  OpenSource,
+
   SelectedProjects,
   SkillSet,
   SlashDivider,
+  WorkExperience,
 } from '@components/structure'
 import { useLogMessage } from '@utils/hooks/use-log-message'
 import { config } from '@config/config'
+import { WhitePapers } from '@components/structure/WhitePaper/whitepapercomponent'
+import { AboutMe } from '@components/structure/aboutme/aboutme'
 
 const Home: NextPage = () => {
   useLogMessage()
@@ -20,9 +23,12 @@ const Home: NextPage = () => {
       <Hero />
       <SlashDivider />
       <SelectedProjects />
-      <OpenSource />
+    
+      <WorkExperience />
+      <WhitePapers />
       <SkillSet />
-      <ContactMe />
+      <AboutMe />
+      {/* <ContactMe /> */}
     </MainLayout>
   )
 }

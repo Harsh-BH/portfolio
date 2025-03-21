@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import type { TFuncKey } from 'i18next'
-import { Heading, SimpleGrid, VStack } from '@chakra-ui/react'
+import { Heading, SimpleGrid, VStack, useColorModeValue } from '@chakra-ui/react'
 import { motion, type Variants } from 'framer-motion'
 import type { SkillGroup as ISkillGroup } from '@utils/types'
 import { SkillBox } from './SkillBox'
@@ -16,7 +16,9 @@ export interface SkillGroupProps extends ISkillGroup {}
 
 export const SkillGroup: React.FC<SkillGroupProps> = ({ category, skills }) => {
   const { t } = useTranslation('common')
-  const [borderColor, setBorderColor] = useState('black')
+  const headingColor = useColorModeValue('gray.800', 'gray.100')
+  const initialBorderColor = useColorModeValue('black', 'whiteAlpha.300')
+  const [borderColor, setBorderColor] = useState(initialBorderColor)
 
   return (
     <motion.div variants={group}>
@@ -29,7 +31,7 @@ export const SkillGroup: React.FC<SkillGroupProps> = ({ category, skills }) => {
         spacing='6'
         transition='border-color 0.1s ease-in-out'
       >
-        <Heading as='h3' variant='skillCategory'>
+        <Heading as='h3' variant='skillCategory' color={headingColor}>
           {t(category as TFuncKey<'common'>)}
         </Heading>
         <SimpleGrid columns={3} spacing='5'>
